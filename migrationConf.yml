@@ -1,0 +1,21 @@
+# This is the configuration file of the data migrartion script
+
+# Source ThingsBoard instance
+source:
+    host: localhost
+    port: 8080
+    user: tenant@thingsboard.org
+    password: tenant
+
+# Target ThingsBoard instance
+target:
+    host: remotehost.com
+    port: 1883
+   
+# Specify path and name of the log file   
+log:
+    file: ./migrationLog.log
+    
+# Specify path and name of the local database text file (used only in "fetch" and "send" modes) --> AVOID EXTENSIONS!
+db:
+    file: ./migrationDb
