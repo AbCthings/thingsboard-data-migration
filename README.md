@@ -10,12 +10,16 @@ usage: migration-script.py [-h] [-c CONFIGURATION] [-m MODE] -i
        INITIALTS -f FINALTS -s SOURCEDEVICEID -t  
        TARGETDEVICETOKEN -k TIMESERIESKEY
 
-# Help
+# Help & examples
 python migration-script.py --help
+
+<br><br>
+Command example:
+python migration-script.py -m both -c ./migrationConf.yml -i 1546361494000 -f 1578415926000 -s dc872480-85e5-11e9-acf5-fb7ea3e0493d -t phhQnVa4nSKjyJ1QMwtx -k data_key
 
 # Operating modes
 You can perform three different operations with this script:
-1) Fetch data via HTTP RESTful API (from source ThingsBoard instance) and send via MQTT (to target ThingsBoard instance) --> use argument "-m <b>both</b>", default behavior
+1) Fetch data via HTTP RESTful API (from source ThingsBoard instance) <i>and</i> send via MQTT (to target ThingsBoard instance) --> use argument "-m <b>both</b>", default behavior
 2) Fetch data via HTTP RESTful API (from source ThingsBoard instance) and save in local file --> use argument "-m <b>fetch</b>"
 3) Fetch data from local file and send via MQTT (to target ThingsBoard instance) --> use argument "-m <b>send</b>"
 
