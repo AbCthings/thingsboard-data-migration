@@ -13,7 +13,7 @@ usage: migration-script.py [-h] [-c CONFIGURATION] [-m MODE] -i
 # Help & examples
 python migration-script.py --help
 
-Command example:
+Command example:<br>
 python migration-script.py -m both -c ./migrationConf.yml -i 1546361494000 -f 1578415926000 -s dc872480-85e5-11e9-acf5-fb7ea3e0493d -t phhQnVa4nSKjyJ1QMwtx -k data_key
 
 # Operating modes
