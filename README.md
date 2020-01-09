@@ -3,7 +3,7 @@ This tool performs data migration between two different instances of ThingsBoard
 <br>
 It also allows the transfer of data between two different devices of the same ThingsBoard instance.
 <br>
-The tool exploits the native ThingsBoard HTTP APIs.
+The tool exploits the native ThingsBoard HTTP APIs to retrive data, and the ThingsBoard MQTT broker to send data.
 
 # How to use
 usage: migration-script.py [-h] [-c CONFIGURATION] [-m MODE] -i 
