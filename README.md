@@ -1,7 +1,7 @@
 # thingsboard-data-migration
 This tool performs data migration between two different instances of ThingsBoard, regardless of the technology used for the database.
 <br>
-It can transfer data between two different devices of the same ThingsBoard instance.
+It also allows the transfer of data between two different devices of the same ThingsBoard instance.
 
 # How to use
 usage: migration-script.py [-h] [-c CONFIGURATION] [-m MODE] -i 
