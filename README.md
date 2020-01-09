@@ -9,12 +9,12 @@ The tool exploits the native ThingsBoard <i>HTTP APIs</i> to retrive data, and t
 usage: migration-script.py [-h] [-c CONFIGURATION] [-m MODE] -i 
        INITIALTS -f FINALTS -s SOURCEDEVICEID -t  
        TARGETDEVICETOKEN -k TIMESERIESKEY
-
-# Help & examples
-python migration-script.py --help
-
+       
 Command example:<br>
 <b>python</b> migration-script.py <b>-m</b> both <b>-c</b> ./migrationConf.yml <b>-i</b> 1546361494000 <b>-f</b> 1578415926000 <b>-s</b> dc872480-85e5-11e9-acf5-fb7ea3e0493d <b>-t</b> phhQnVa4nSKjyJ1QMwtx <b>-k</b> data_key
+
+# Help
+python migration-script.py --help
 
 # Operating modes
 You can perform three different operations with this script:
