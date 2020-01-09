@@ -16,4 +16,5 @@ You can perform three different operations with this script:
 3) Fetch data from local file and send via MQTT (to target ThingsBoard instance) --> use argument "-m <b>send</b>"
 
 *** IMPORTANT ***
-You shall pass ALL the required arguments, even if not used within the chosen operating mode. Next version will include an automated arguemnt check to allow the user specify only the strictly necessary ones.
+<br>
+You shall always pass ALL the arguments, even if not used within the chosen operating mode. Next version of this script will include an automated argument check to allow the user specify only the strictly necessary ones.
