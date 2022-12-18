@@ -52,6 +52,7 @@ def getData(ip,port,user,password,deviceId,key,startTs,endTs):
     data = '{"username":"'+user+'", "password":"'+password+'"}'
 
     # Perform the POST request to obtain X-Token Authorization
+    # IF YOU ARE IN LAN REMBEMBER TO CHANGE FROM HTTPS TO HTTP
     try:
         response = requests.post('https://'+ip+':'+str(port)+'/api/auth/login', headers=headersToken, data=data)
         X_AUTH_TOKEN = response.json()['token']
@@ -64,8 +65,9 @@ def getData(ip,port,user,password,deviceId,key,startTs,endTs):
     headers = {'Accept':'application/json','X-Authorization': 'Bearer '+X_AUTH_TOKEN}
 
     # Perform the GET request to obtain timeseries
+    # IF YOU ARE IN LAN REMBEMBER TO CHANGE FROM HTTPS TO HTTP
     try:
-        r = requests.get("https://"+ip+":"+port+"/api/plugins/telemetry/DEVICE/"+deviceId+"/values/timeseries?interval="+INTERVAL+"&limit="+LIMIT+"&agg="+AGG+"&keys="+key+"&startTs="+startTs+"&endTs="+endTs,headers=headers)
+        r = requests.get("https://"+str(ip)+":"+port+"/api/plugins/telemetry/DEVICE/"+deviceId+"/values/timeseries?interval="+INTERVAL+"&limit="+LIMIT+"&agg="+AGG+"&keys="+key+"&startTs="+startTs+"&endTs="+endTs,headers=headers)
         print("Request to SOURCE ThingsBoard - response code: ", r.status_code)
     except Exception as e:
         print("\nAn exception occurred while trying to obtain and print the timeseries from SOURCE Thigsboard: ", e)
